@@ -25,9 +25,9 @@
         <% if user['email'] %>
           <li><%= link_to 'say hi', "mailto:#{user['email']}?subject:whats up!" %></li>
         <% end %>
-        <li><%= link_to 'rss feed', '/posts.rss' %></li>
       </ul>
     <%- end %>
+    <%= link_to 'rss feed', '/posts.rss' %>
     <span class="powered-by">
       Powered by <a href="http://github.com/natew/obtvse.git">Obtvse</a>
       <% if is_admin? %> &nbsp;&middot;&nbsp; <a href="/admin">Admin</a><% end %>
