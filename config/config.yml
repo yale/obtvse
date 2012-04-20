@@ -1,10 +1,26 @@
 ---
-title:               Obtvse Demo
-tagline:             Clever tagline.
+title:               Rain.io
+tagline:             What the blog?
 login:               <%= ENV["obtvse_login"] ? ENV["obtvse_login"] : "username" %>
 password:            <%= ENV["obtvse_password"] ? ENV["obtvse_password"] : "password" %>
-name:                Your name
-twitter:             your_twitter_handle
-github:              your_github_handle
-email:               address@example.com
 google_analytics_id: YOUR_GA_ID
+users:
+  yale:
+    name:                Yale Spector
+    google_id:           yale.spector
+    google_plus_id:      "115690271553939884996"
+    github:              yale
+    email:               yale.spector@gmail.com
+  ben:
+    name:                Ben Gorelick
+    google_id:           ben.gorelick
+    google_plus_id:      "113251026724549645315"
+    github:              
+    email:               ben.gorelick@gmail.com
+  mike:
+    name:                Mike Laderman
+    google_id:           michael.laderman
+    google_plus_id:      "105329662941945839874"
+    github:              mladerman
+    email:               ben.gorelick@gmail.com
+
