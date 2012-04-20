@@ -24,8 +24,8 @@ group :development do
   # gem 'heroku', '~> 2'
   # gem 'capistrano', '~> 2.9'
   # gem 'guard', '~> 1'
-  # gem 'guard-rspec', '~> 0.6'
-  # gem 'guard-spork', '~> 0.5'
+  gem 'guard-rspec', '~> 0.6'
+  gem 'guard-spork', '~> 0.5'
   gem 'rails_best_practices', '~> 1'
 end
 
@@ -40,6 +40,7 @@ group :development, :test do
   gem 'sqlite3', '~> 1', platform: [:ruby, :mswin, :mingw]
   gem 'faker', '~> 1'
   gem 'factory_girl_rails', '~> 1'
+  gem 'ruby-debug19'
 end
 
 group :assets do

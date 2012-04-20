@@ -14,18 +14,20 @@
   <header>
     <h1><%= link_to CONFIG['title'], root_url %></h1>
     <span><%= CONFIG['tagline'].html_safe %></span>
-    <ul>
-      <% if CONFIG['twitter'] %>
-        <li><%= link_to '@' + CONFIG['twitter'], 'http://twitter.com/' + CONFIG['twitter'] %></li>
-      <% end %>
-      <% if CONFIG['github'] %>
-        <li><%= link_to 'github', 'https://github.com/' + CONFIG['github'] %></li>
-      <% end %>
-      <% if CONFIG['email'] %>
-        <li><%= link_to 'say hi', "mailto:#{CONFIG['email']}?subject:whats up!" %></li>
-      <% end %>
-      <li><%= link_to 'rss feed', '/posts.rss' %></li>
-    </ul>
+    <%- CONFIG['users'].each do |nick, user| %>
+      <ul>
+        <% if user['google_id'] %>
+          <li><%= link_to '+' + user['google_id'], 'http://plus.google.com/u/0/' + user['google_plus_id'] %></li>
+        <% end %>
+        <% if user['github'] %>
+          <li><%= link_to 'github', 'https://github.com/' + user['github'] %></li>
+        <% end %>
+        <% if user['email'] %>
+          <li><%= link_to 'say hi', "mailto:#{CONFIG['email']}?subject:whats up!" %></li>
+        <% end %>
+        <li><%= link_to 'rss feed', '/posts.rss' %></li>
+      </ul>
+    <%- end %>
     <span class="powered-by">
       Powered by <a href="http://github.com/natew/obtvse.git">Obtvse</a>
       <% if is_admin? %> &nbsp;&middot;&nbsp; <a href="/admin">Admin</a><% end %>
