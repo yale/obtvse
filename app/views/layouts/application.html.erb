@@ -23,7 +23,7 @@
           <li><%= link_to 'github', 'https://github.com/' + user['github'] %></li>
         <% end %>
         <% if user['email'] %>
-          <li><%= link_to 'say hi', "mailto:#{CONFIG['email']}?subject:whats up!" %></li>
+          <li><%= link_to 'say hi', "mailto:#{user['email']}?subject:whats up!" %></li>
         <% end %>
         <li><%= link_to 'rss feed', '/posts.rss' %></li>
       </ul>
